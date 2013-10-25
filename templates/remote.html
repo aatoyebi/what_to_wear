@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block body %}
+    <h2>Remote Control</h2>
+    Enter Python to execute:
+    <form action="{{url_for('remote')}}" method="post">
+        <input type="text" name="expression" class="input-xlarge" id="focusedInput" value="Enter command..." /><br />
+        <input type="submit" value="Execute" class="btn btn-primary" />
+    </form>
+{% endblock %}

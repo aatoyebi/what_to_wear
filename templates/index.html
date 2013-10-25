@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+		<div id="desc">
+			<h1>What to Wear</h1>
+			<p> This app determines the weather conditions at your location and suggests sensible attire to deal with otherwise unforseen weather conditions.
+        </div>
+
+        <form action="{{url_for('main')}}" method="post">
+            <input type="text" name="zipcode" placeholder="Enter your zip code" /><br />
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </form>
+
+
+{% endblock %}

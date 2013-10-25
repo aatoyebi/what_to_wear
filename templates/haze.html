@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+    <h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </h1>
+
+    <div id="playlist">
+        <iframe name="rainy" src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:4BYGxv4rxSNcTgT3DsFB9o,1pr9TZGOXeJUggIal1Wq3R,49FYlytm3dAAraYgpoJZux" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+    
+    <form action="{{url_for('main')}}" method="get">
+            <input type="submit" value="Return to Home" class="btn" />
+    </form>
+{% endblock %}
